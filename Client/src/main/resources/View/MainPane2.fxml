@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.MainPaneController">
+   <bottom>
+      <Pane prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="cashImage" fitHeight="25.0" fitWidth="25.0" layoutX="129.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="totalPriceLabel" layoutX="154.0" layoutY="264.0" prefHeight="25.0" prefWidth="60.0" />
+            <TextArea fx:id="textareaOrderList" layoutX="14.0" layoutY="14.0" prefHeight="250.0" prefWidth="200.0" />
+            <ImageView fx:id="imageOrder" fitHeight="80.0" fitWidth="80.0" layoutX="405.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="labelOrderAmount" layoutX="405.0" layoutY="119.0" prefHeight="20.0" prefWidth="80.0" />
+            <ImageView fx:id="imageOrderAmountAdd" fitHeight="20.0" fitWidth="20.0" layoutX="385.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageOrderAmountRemove" fitHeight="20.0" fitWidth="20.0" layoutX="485.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="40.0" tabMaxWidth="45.0" tabMinHeight="40.0" tabMinWidth="45.0" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="tabPane1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+                     <children>
+                        <HBox layoutX="14.0" layoutY="50.0" prefHeight="100.0" prefWidth="522.0">
+                           <children>
+                              <VBox prefHeight="104.0" prefWidth="76.0">
+                                 <children>
+                                    <Button fx:id="mealButton1" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <ImageView fx:id="mealImage1" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="mealInfo1" prefHeight="10.0" prefWidth="76.0">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="104.0" prefWidth="76.0">
+                                 <children>
+                                    <Button fx:id="mealButton2" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="89.0" prefWidth="48.0" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <ImageView fx:id="mealImage2" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="mealInfo2" prefHeight="10.0" prefWidth="76.0">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox layoutX="86.0" layoutY="10.0" prefHeight="104.0" prefWidth="76.0">
+                                 <children>
+                                    <Button fx:id="mealButton3" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="89.0" prefWidth="48.0" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <ImageView fx:id="mealImage3" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="mealInfo3" prefHeight="10.0" prefWidth="76.0">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="13.0" layoutY="230.0" prefHeight="100.0" prefWidth="522.0">
+                           <children>
+                              <VBox prefHeight="104.0" prefWidth="76.0">
+                                 <children>
+                                    <Button fx:id="mealButton11" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <ImageView fx:id="mealImage4" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="mealInfo4" prefHeight="10.0" prefWidth="76.0">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="104.0" prefWidth="76.0">
+                                 <children>
+                                    <Button fx:id="mealButton111" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="89.0" prefWidth="48.0" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <ImageView fx:id="mealImage5" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="mealInfo5" prefHeight="10.0" prefWidth="76.0">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox layoutX="86.0" layoutY="10.0" prefHeight="104.0" prefWidth="76.0">
+                                 <children>
+                                    <Button fx:id="mealButton1111" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" prefHeight="89.0" prefWidth="48.0" textAlignment="CENTER" wrapText="true">
+                                       <graphic>
+                                          <ImageView fx:id="mealImage6" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                    <Label fx:id="mealInfo6" prefHeight="10.0" prefWidth="76.0">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <ImageView fx:id="tabImage1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+          </Tab>
+          <Tab fx:id="tabPane2">
+               <graphic>
+                  <ImageView fx:id="tabImage2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+                     <children>
+                        <ImageView fx:id="mealImage11" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage21" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage31" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage41" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage51" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage61" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="mealInfo11" layoutX="50.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo21" layoutX="230.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo31" layoutX="410.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo41" layoutX="50.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo51" layoutX="230.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo61" layoutX="410.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+            <Tab fx:id="tabPane3">
+               <graphic>
+                  <ImageView fx:id="tabImage3" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+                     <children>
+                        <ImageView fx:id="mealImage12" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage22" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage32" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage42" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage52" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage62" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="mealInfo12" layoutX="50.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo22" layoutX="230.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo32" layoutX="410.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo42" layoutX="50.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo52" layoutX="230.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo62" layoutX="410.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabPane4">
+               <graphic>
+                  <ImageView fx:id="tabImage4" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+                     <children>
+                        <ImageView fx:id="mealImage13" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage23" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage33" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage43" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage53" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mealImage63" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="mealInfo13" layoutX="50.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo23" layoutX="230.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo33" layoutX="410.0" layoutY="130.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo43" layoutX="50.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo53" layoutX="230.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                        <Label fx:id="mealInfo63" layoutX="410.0" layoutY="310.0" prefHeight="20.0" prefWidth="80.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <Pane prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

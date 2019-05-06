@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller.MainPaneController">
+   <bottom>
+      <Pane prefHeight="300.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <ImageView fx:id="cashImage" fitHeight="25.0" fitWidth="25.0" layoutX="205.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true" />
+         <Label fx:id="totalPriceLabel" alignment="CENTER" layoutX="230.0" layoutY="263.0" prefHeight="25.0" prefWidth="60.0" textAlignment="CENTER">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <ImageView fx:id="imageOrder" fitHeight="90.0" fitWidth="90.0" layoutX="446.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="imageOrderAmountRemove" fitHeight="30.0" fitWidth="30.0" layoutX="421.0" layoutY="102.0" onMouseClicked="#changeOrderAmount" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="imageOrderAmountAdd" fitHeight="30.0" fitWidth="30.0" layoutX="531.0" layoutY="102.0" onMouseClicked="#changeOrderAmount" pickOnBounds="true" preserveRatio="true" />
+         <TextField fx:id="textFieldOrderAmount" alignment="CENTER" layoutX="463.0" layoutY="102.0" prefHeight="20.0" prefWidth="56.0">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </TextField>
+         <ImageView fx:id="imageOrderAdd" fitHeight="60.0" fitWidth="60.0" layoutX="461.0" layoutY="138.0" onMouseClicked="#addToOrderList" pickOnBounds="true" preserveRatio="true" />
+         <TableView fx:id="tableViewOrderList" editable="true" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="249.0" prefWidth="276.0">
+            <columns>
+               <TableColumn fx:id="orderNameColumn" prefWidth="172.0" text="Meal" />
+               <TableColumn fx:id="orderAmountColumn" maxWidth="56.0" minWidth="-1.0" prefWidth="56.0" resizable="false" text="Amount" />
+               <TableColumn fx:id="orderPriceColumn" minWidth="0.0" prefWidth="47.0" text="Price" />
+            </columns>
+         </TableView>
+         <ImageView fx:id="imageConfirm" fitHeight="60.0" fitWidth="60.0" layoutX="288.0" layoutY="203.0" onMouseClicked="#confimrTransaction" pickOnBounds="true" preserveRatio="true" />
+         <ImageView fx:id="imageRemoveOrder" fitHeight="60.0" fitWidth="60.0" layoutX="290.0" layoutY="138.0" onMouseClicked="#removeSelectedOrder" pickOnBounds="true" preserveRatio="true" />
+      </Pane>
+   </bottom>
+   <center>
+      <TabPane prefHeight="400.0" prefWidth="600.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="40.0" tabMaxWidth="45.0" tabMinHeight="40.0" tabMinWidth="45.0" BorderPane.alignment="CENTER">
+         <Tab fx:id="tabPane1">
+            <graphic>
+               <ImageView fx:id="tabImage1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+               <ImageView fx:id="mealImage11" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage21" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage31" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage41" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage51" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage61" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <Label fx:id="mealInfo11" alignment="TOP_CENTER" layoutX="40.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo21" alignment="TOP_CENTER" layoutX="220.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo31" alignment="TOP_CENTER" layoutX="400.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo41" alignment="TOP_CENTER" layoutX="40.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo51" alignment="TOP_CENTER" layoutX="220.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo61" alignment="TOP_CENTER" layoutX="400.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            </AnchorPane>
+         </Tab>
+         <Tab fx:id="tabPane2">
+            <graphic>
+               <ImageView fx:id="tabImage2" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+               <ImageView fx:id="mealImage12" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage22" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage32" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage42" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage52" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage62" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <Label fx:id="mealInfo12" alignment="TOP_CENTER" layoutX="40.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo22" alignment="TOP_CENTER" layoutX="220.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo32" alignment="TOP_CENTER" layoutX="400.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo42" alignment="TOP_CENTER" layoutX="40.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo52" alignment="TOP_CENTER" layoutX="220.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo62" alignment="TOP_CENTER" layoutX="400.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            </AnchorPane>
+         </Tab>
+         <Tab fx:id="tabPane3">
+            <graphic>
+               <ImageView fx:id="tabImage3" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+               <ImageView fx:id="mealImage13" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage23" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage33" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage43" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage53" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage63" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <Label fx:id="mealInfo13" alignment="TOP_CENTER" layoutX="40.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo23" alignment="TOP_CENTER" layoutX="220.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo33" alignment="TOP_CENTER" layoutX="400.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo43" alignment="TOP_CENTER" layoutX="40.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo53" alignment="TOP_CENTER" layoutX="220.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo63" alignment="TOP_CENTER" layoutX="400.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+            </AnchorPane>
+         </Tab>
+         <Tab fx:id="tabPane4">
+            <graphic>
+               <ImageView fx:id="tabImage4" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+            </graphic>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="540.0" prefWidth="540.0">
+               <ImageView fx:id="mealImage14" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage24" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage34" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="60.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage44" fitHeight="60.0" fitWidth="60.0" layoutX="60.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage54" fitHeight="60.0" fitWidth="60.0" layoutX="240.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="mealImage64" fitHeight="60.0" fitWidth="60.0" layoutX="420.0" layoutY="240.0" onMouseClicked="#setOrderImage" pickOnBounds="true" preserveRatio="true" />
+               <Label fx:id="mealInfo14" alignment="TOP_CENTER" layoutX="40.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo24" alignment="TOP_CENTER" layoutX="220.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo34" alignment="TOP_CENTER" layoutX="400.0" layoutY="130.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo44" alignment="TOP_CENTER" layoutX="40.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo54" alignment="TOP_CENTER" layoutX="220.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+               <Label fx:id="mealInfo64" alignment="TOP_CENTER" layoutX="400.0" layoutY="310.0" prefHeight="40.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" />
+
+
+            </AnchorPane>
+         </Tab>
+      </TabPane>
+   </center>
+   <top>
+      <Pane prefHeight="40.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelTime" alignment="CENTER" layoutX="506.0" layoutY="7.0" prefHeight="20.0" prefWidth="80.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelData" alignment="TOP_RIGHT" layoutX="426.0" layoutY="27.0" prefHeight="20.0" prefWidth="160.0" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </top>
+</BorderPane>
